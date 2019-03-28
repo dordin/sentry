@@ -192,7 +192,7 @@ class DjangoSearchBackend(SearchBackend):
                     ).values_list('group'),
                 ),
             ),
-            'active_at': ScalarCondition('active_at'),
+            'active_at': SearchFilterScalarCondition('active_at'),
         }
 
         message = [
