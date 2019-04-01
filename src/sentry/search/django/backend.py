@@ -39,6 +39,12 @@ class Condition(object):
     ``QuerySetBuilder``.
     """
 
+    def _get_django_operator(self, search_filter):
+        django_operator = OPERATOR_TO_DJANGO.get(search_filter.operator, '')
+        if django_operator:
+            django_operator = '__{}'.format(django_operator)
+        return django_operator
+
     def apply(self, queryset, name, parameters):
         raise NotImplementedError
 
@@ -60,6 +66,33 @@ class QCallbackCondition(Condition):
         queryset_method = queryset.filter if search_filter.operator == '=' else queryset.exclude
         queryset = queryset_method(q)
         return queryset
+
+
+class QCustomCallbackCondition(Condition):
+    def __init__(self, q_fields, q_values):
+        self.q_fields = q_fields
+        self.q_values = q_values
+
+    def apply(self, queryset, value, search_filter=None):
+        if search_filter.operator not in OPERATOR_TO_DJANGO:
+            raise InvalidSearchQuery(
+                u'Operator {} not valid for search {}'.format(
+                    search_filter.operator,
+                    search_filter,
+                ),
+            )
+
+        # substitute the operator into the fields
+        django_operator = self._get_django_operator(search_filter)
+        q_fields = []
+        for field in self.q_fields:
+            if '{}' in field:
+                q_fields.append(field.format(django_operator))
+            else:
+                q_fields.append(field)
+
+        # combine the fields and values into Q queries
+        return lambda: Q(**{field: value for field, value in zip(q_fields, self.q_values)})
 
 
 OPERATOR_TO_DJANGO = {
