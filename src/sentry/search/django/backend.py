@@ -39,7 +39,7 @@ class Condition(object):
     ``QuerySetBuilder``.
     """
 
-    def _get_django_operator(self, search_filter):
+    def _get_operator(self, search_filter):
         django_operator = OPERATOR_TO_DJANGO.get(search_filter.operator, '')
         if django_operator:
             django_operator = '__{}'.format(django_operator)
@@ -68,33 +68,6 @@ class QCallbackCondition(Condition):
         return queryset
 
 
-class QCustomCallbackCondition(Condition):
-    def __init__(self, q_fields, q_values):
-        self.q_fields = q_fields
-        self.q_values = q_values
-
-    def apply(self, queryset, value, search_filter=None):
-        if search_filter.operator not in OPERATOR_TO_DJANGO:
-            raise InvalidSearchQuery(
-                u'Operator {} not valid for search {}'.format(
-                    search_filter.operator,
-                    search_filter,
-                ),
-            )
-
-        # substitute the operator into the fields
-        django_operator = self._get_django_operator(search_filter)
-        q_fields = []
-        for field in self.q_fields:
-            if '{}' in field:
-                q_fields.append(field.format(django_operator))
-            else:
-                q_fields.append(field)
-
-        # combine the fields and values into Q queries
-        return lambda: Q(**{field: value for field, value in zip(q_fields, self.q_values)})
-
-
 OPERATOR_TO_DJANGO = {
     '>=': 'gte',
     '<=': 'lte',
@@ -109,8 +82,9 @@ class ScalarCondition(Condition):
     instances
     """
 
-    def __init__(self, field):
+    def __init__(self, field, extra_q=None):
         self.field = field
+        self.extra_q = extra_q
 
     def _get_operator(self, search_filter):
         django_operator = OPERATOR_TO_DJANGO.get(search_filter.operator, '')
@@ -122,6 +96,10 @@ class ScalarCondition(Condition):
         django_operator = self._get_operator(search_filter)
 
         qs_method = queryset.exclude if search_filter.operator == '!=' else queryset.filter
+        q_dict = {'{}{}'.format(self.field, django_operator): value}
+
+        if self.extra_q:
+            q_dict.update(self.extra_q)
 
         return qs_method(
             **{'{}{}'.format(self.field, django_operator): search_filter.value.raw_value}
