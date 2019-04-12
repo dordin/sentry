@@ -10,15 +10,15 @@ exports[`Sentry Application Details edit existing application renders() it shows
   }
 >
   <SideEffect(DocumentTitle)
-    title="Sentry Application Details - Sentry"
+    title="Sentry Integration Details - Sentry"
   >
     <DocumentTitle
-      title="Sentry Application Details - Sentry"
+      title="Sentry Integration Details - Sentry"
     >
       <div>
         <SettingsPageHeading
           noTitleStyles={false}
-          title="Sentry Application Details"
+          title="Sentry Integration Details"
         >
           <Wrapper>
             <div
@@ -49,7 +49,7 @@ exports[`Sentry Application Details edit existing application renders() it shows
                             <h4
                               className="css-1w8ttcn-HeaderTitle e6lvex72"
                             >
-                              Sentry Application Details
+                              Sentry Integration Details
                             </h4>
                           </HeaderTitle>
                         </div>
@@ -22569,15 +22569,15 @@ exports[`Sentry Application Details new sentry application renders() it shows em
   }
 >
   <SideEffect(DocumentTitle)
-    title="Sentry Application Details - Sentry"
+    title="Sentry Integration Details - Sentry"
   >
     <DocumentTitle
-      title="Sentry Application Details - Sentry"
+      title="Sentry Integration Details - Sentry"
     >
       <div>
         <SettingsPageHeading
           noTitleStyles={false}
-          title="Sentry Application Details"
+          title="Sentry Integration Details"
         >
           <Wrapper>
             <div
@@ -22608,7 +22608,7 @@ exports[`Sentry Application Details new sentry application renders() it shows em
                             <h4
                               className="css-1w8ttcn-HeaderTitle e6lvex72"
                             >
-                              Sentry Application Details
+                              Sentry Integration Details
                             </h4>
                           </HeaderTitle>
                         </div>
