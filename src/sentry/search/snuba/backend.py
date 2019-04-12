@@ -88,7 +88,7 @@ class SnubaSearchBackend(ds.DjangoSearchBackend):
                         groupenvironment__first_release__version=version,
                     )
                 ),
-                'first_seen': ds.SearchFilterScalarCondition(
+                'first_seen': ds.ScalarCondition(
                     'groupenvironment__first_seen',
                     {'groupenvironment__environment_id__in': environment_ids}
                 ),
@@ -101,7 +101,7 @@ class SnubaSearchBackend(ds.DjangoSearchBackend):
                         first_release__version=version,
                     ),
                 ),
-                'first_seen': ds.SearchFilterScalarCondition('first_seen'),
+                'first_seen': ds.ScalarCondition('first_seen'),
             }).build(group_queryset, search_filters)
 
         now = timezone.now()

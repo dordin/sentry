@@ -1175,12 +1175,9 @@ class SnubaSearchTest(TestCase, SnubaTestCase):
             sort_by='new',
         )
         assert query_mock.call_args == mock.call(
-            orderby=['-first_seen', 'issue'],
-            aggregations=[
-                ['toUInt64(min(timestamp)) * 1000', '', 'first_seen'],
-                ['uniq', 'issue', 'total'],
-            ],
-            having=[['first_seen', '>=', Any(int)]],
+            aggregations=[['count()', '', 'times_seen'], ['uniq', 'issue', 'total']],
+            having=[['times_seen', '=', Any(int)]],
+            orderby=['-times_seen', 'issue'],
             **common_args
         )
 

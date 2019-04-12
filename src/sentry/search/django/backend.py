@@ -1,7 +1,6 @@
 """
 sentry.search.django.backend
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 :copyright: (c) 2010-2014 by the Sentry Team, see AUTHORS for more details.
 :license: BSD, see LICENSE for more details.
 """
@@ -90,14 +89,12 @@ class ScalarCondition(Condition):
         django_operator = self._get_operator(search_filter)
 
         qs_method = queryset.exclude if search_filter.operator == '!=' else queryset.filter
-        q_dict = {'{}{}'.format(self.field, django_operator): value}
+        q_dict = {'{}{}'.format(self.field, django_operator): search_filter.value.raw_value}
 
         if self.extra_q:
             q_dict.update(self.extra_q)
 
-        return qs_method(
-            **{'{}{}'.format(self.field, django_operator): search_filter.value.raw_value}
-        )
+        return qs_method(**q_dict)
 
 
 def assigned_to_filter(actor, projects):
@@ -197,7 +194,7 @@ class DjangoSearchBackend(SearchBackend):
                     ).values_list('group'),
                 ),
             ),
-            'active_at': SearchFilterScalarCondition('active_at'),
+            'active_at': ScalarCondition('active_at'),
         }
 
         message = [
