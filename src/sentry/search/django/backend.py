@@ -39,12 +39,6 @@ class Condition(object):
     ``QuerySetBuilder``.
     """
 
-    def _get_operator(self, search_filter):
-        django_operator = OPERATOR_TO_DJANGO.get(search_filter.operator, '')
-        if django_operator:
-            django_operator = '__{}'.format(django_operator)
-        return django_operator
-
     def apply(self, queryset, name, parameters):
         raise NotImplementedError
 
