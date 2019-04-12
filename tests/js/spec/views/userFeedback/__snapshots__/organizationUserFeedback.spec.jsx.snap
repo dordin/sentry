@@ -429,17 +429,10 @@ exports[`OrganizationUserFeedback renders 1`] = `
                             "/org-slug/project-slug/",
                           ],
                           Array [
-                            "/org-slug/project-slug/issues/1/activity/",
-                          ],
-                          Array [
                             "/organizations/org-slug/issues/1/events/12345678901234567890123456789012/",
                           ],
                         ],
                         "results": Array [
-                          Object {
-                            "type": "return",
-                            "value": undefined,
-                          },
                           Object {
                             "type": "return",
                             "value": undefined,
@@ -559,17 +552,10 @@ exports[`OrganizationUserFeedback renders 1`] = `
                               "/org-slug/project-slug/",
                             ],
                             Array [
-                              "/org-slug/project-slug/issues/1/activity/",
-                            ],
-                            Array [
                               "/organizations/org-slug/issues/1/events/12345678901234567890123456789012/",
                             ],
                           ],
                           "results": Array [
-                            Object {
-                              "type": "return",
-                              "value": undefined,
-                            },
                             Object {
                               "type": "return",
                               "value": undefined,
@@ -2046,12 +2032,40 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                   <WithOrganizationMockWrapper
                                     data={
                                       Object {
+                                        "activity": Array [],
+                                        "annotations": Array [],
                                         "assignedTo": null,
+                                        "count": "327482",
+                                        "culprit": "fetchData(app/components/group/suggestedOwners)",
+                                        "firstRelease": null,
+                                        "firstSeen": "2019-04-05T19:44:05.963Z",
+                                        "hasSeen": false,
                                         "id": "1",
+                                        "isBookmarked": false,
+                                        "isPublic": false,
+                                        "isSubscribed": false,
+                                        "lastRelease": null,
+                                        "lastSeen": "2019-04-11T01:08:59Z",
+                                        "level": "warning",
+                                        "logger": null,
+                                        "metadata": Object {
+                                          "function": "fetchData",
+                                          "type": "RequestError",
+                                        },
+                                        "numComments": 0,
+                                        "participants": Array [],
+                                        "permalink": "https://foo.io/organizations/foo/issues/1234/",
+                                        "pluginActions": Array [],
+                                        "pluginContexts": Array [],
+                                        "pluginIssues": Array [],
                                         "project": Object {
                                           "id": "2",
+                                          "platform": "javascript",
                                           "slug": "project-slug",
                                         },
+                                        "seenBy": Array [],
+                                        "shareId": null,
+                                        "shortId": "JAVASCRIPT-6QS",
                                         "stats": Object {
                                           "24h": Array [
                                             Array [
@@ -2074,7 +2088,14 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                             ],
                                           ],
                                         },
+                                        "status": "unresolved",
+                                        "statusDetails": Object {},
+                                        "subscriptionDetails": null,
                                         "tags": Array [],
+                                        "title": "RequestError: GET /issues/ 404",
+                                        "type": "error",
+                                        "userCount": 35097,
+                                        "userReportCount": 0,
                                       }
                                     }
                                     eventId="12345678901234567890123456789012"
@@ -2084,12 +2105,40 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                     <CompactIssue
                                       data={
                                         Object {
+                                          "activity": Array [],
+                                          "annotations": Array [],
                                           "assignedTo": null,
+                                          "count": "327482",
+                                          "culprit": "fetchData(app/components/group/suggestedOwners)",
+                                          "firstRelease": null,
+                                          "firstSeen": "2019-04-05T19:44:05.963Z",
+                                          "hasSeen": false,
                                           "id": "1",
+                                          "isBookmarked": false,
+                                          "isPublic": false,
+                                          "isSubscribed": false,
+                                          "lastRelease": null,
+                                          "lastSeen": "2019-04-11T01:08:59Z",
+                                          "level": "warning",
+                                          "logger": null,
+                                          "metadata": Object {
+                                            "function": "fetchData",
+                                            "type": "RequestError",
+                                          },
+                                          "numComments": 0,
+                                          "participants": Array [],
+                                          "permalink": "https://foo.io/organizations/foo/issues/1234/",
+                                          "pluginActions": Array [],
+                                          "pluginContexts": Array [],
+                                          "pluginIssues": Array [],
                                           "project": Object {
                                             "id": "2",
+                                            "platform": "javascript",
                                             "slug": "project-slug",
                                           },
+                                          "seenBy": Array [],
+                                          "shareId": null,
+                                          "shortId": "JAVASCRIPT-6QS",
                                           "stats": Object {
                                             "24h": Array [
                                               Array [
@@ -2112,7 +2161,14 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                               ],
                                             ],
                                           },
+                                          "status": "unresolved",
+                                          "statusDetails": Object {},
+                                          "subscriptionDetails": null,
                                           "tags": Array [],
+                                          "title": "RequestError: GET /issues/ 404",
+                                          "type": "error",
+                                          "userCount": 35097,
+                                          "userReportCount": 0,
                                         }
                                       }
                                       eventId="12345678901234567890123456789012"
@@ -2147,7 +2203,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                       }
                                     >
                                       <PanelItem
-                                        className="issue level-undefined"
+                                        className="issue level-warning"
                                         direction="column"
                                         p={2}
                                         style={
@@ -2158,7 +2214,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                         }
                                       >
                                         <Base
-                                          className="issue level-undefined css-1cf8lr1-PanelItem eo8n7lk0"
+                                          className="issue level-warning css-1cf8lr1-PanelItem eo8n7lk0"
                                           direction="column"
                                           p={2}
                                           style={
@@ -2169,7 +2225,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                           }
                                         >
                                           <div
-                                            className="issue level-undefined css-1cf8lr1-PanelItem eo8n7lk0"
+                                            className="issue level-warning css-1cf8lr1-PanelItem eo8n7lk0"
                                             is={null}
                                             style={
                                               Object {
@@ -2181,12 +2237,40 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                             <CompactIssueHeader
                                               data={
                                                 Object {
+                                                  "activity": Array [],
+                                                  "annotations": Array [],
                                                   "assignedTo": null,
+                                                  "count": "327482",
+                                                  "culprit": "fetchData(app/components/group/suggestedOwners)",
+                                                  "firstRelease": null,
+                                                  "firstSeen": "2019-04-05T19:44:05.963Z",
+                                                  "hasSeen": false,
                                                   "id": "1",
+                                                  "isBookmarked": false,
+                                                  "isPublic": false,
+                                                  "isSubscribed": false,
+                                                  "lastRelease": null,
+                                                  "lastSeen": "2019-04-11T01:08:59Z",
+                                                  "level": "warning",
+                                                  "logger": null,
+                                                  "metadata": Object {
+                                                    "function": "fetchData",
+                                                    "type": "RequestError",
+                                                  },
+                                                  "numComments": 0,
+                                                  "participants": Array [],
+                                                  "permalink": "https://foo.io/organizations/foo/issues/1234/",
+                                                  "pluginActions": Array [],
+                                                  "pluginContexts": Array [],
+                                                  "pluginIssues": Array [],
                                                   "project": Object {
                                                     "id": "2",
+                                                    "platform": "javascript",
                                                     "slug": "project-slug",
                                                   },
+                                                  "seenBy": Array [],
+                                                  "shareId": null,
+                                                  "shortId": "JAVASCRIPT-6QS",
                                                   "stats": Object {
                                                     "24h": Array [
                                                       Array [
@@ -2209,7 +2293,14 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                       ],
                                                     ],
                                                   },
+                                                  "status": "unresolved",
+                                                  "statusDetails": Object {},
+                                                  "subscriptionDetails": null,
                                                   "tags": Array [],
+                                                  "title": "RequestError: GET /issues/ 404",
+                                                  "type": "error",
+                                                  "userCount": 35097,
+                                                  "userReportCount": 0,
                                                 }
                                               }
                                               eventId="12345678901234567890123456789012"
@@ -2267,6 +2358,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                         >
                                                           <span
                                                             className="error-level truncate"
+                                                            title="warning"
                                                           />
                                                         </div>
                                                       </Base>
@@ -2292,7 +2384,21 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                             <span
                                                               className="icon icon-star-solid"
                                                             />
-                                                            <span />
+                                                            <span>
+                                                              <span
+                                                                style={
+                                                                  Object {
+                                                                    "marginRight": 10,
+                                                                  }
+                                                                }
+                                                              >
+                                                                RequestError
+                                                              </span>
+                                                              <em>
+                                                                fetchData(app/components/group/suggestedOwners)
+                                                              </em>
+                                                              <br />
+                                                            </span>
                                                           </a>
                                                         </Link>
                                                       </Link>
@@ -2323,33 +2429,6 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                     </Link>
                                                   </ProjectLink>
                                                 </span>
-                                                <span>
-                                                  <Link
-                                                    className="comments"
-                                                    to="/org-slug/project-slug/issues/1/activity/"
-                                                  >
-                                                    <Link
-                                                      className="comments"
-                                                      onlyActiveOnIndex={false}
-                                                      style={Object {}}
-                                                      to="/org-slug/project-slug/issues/1/activity/"
-                                                    >
-                                                      <a
-                                                        className="comments"
-                                                        onClick={[Function]}
-                                                        style={Object {}}
-                                                      >
-                                                        <span
-                                                          className="icon icon-comments"
-                                                          style={Object {}}
-                                                        />
-                                                        <span
-                                                          className="tag-count"
-                                                        />
-                                                      </a>
-                                                    </Link>
-                                                  </Link>
-                                                </span>
                                                 <span
                                                   className="culprit"
                                                 />
@@ -2371,12 +2450,40 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                   },
                                                   "id": "123",
                                                   "issue": Object {
+                                                    "activity": Array [],
+                                                    "annotations": Array [],
                                                     "assignedTo": null,
+                                                    "count": "327482",
+                                                    "culprit": "fetchData(app/components/group/suggestedOwners)",
+                                                    "firstRelease": null,
+                                                    "firstSeen": "2019-04-05T19:44:05.963Z",
+                                                    "hasSeen": false,
                                                     "id": "1",
+                                                    "isBookmarked": false,
+                                                    "isPublic": false,
+                                                    "isSubscribed": false,
+                                                    "lastRelease": null,
+                                                    "lastSeen": "2019-04-11T01:08:59Z",
+                                                    "level": "warning",
+                                                    "logger": null,
+                                                    "metadata": Object {
+                                                      "function": "fetchData",
+                                                      "type": "RequestError",
+                                                    },
+                                                    "numComments": 0,
+                                                    "participants": Array [],
+                                                    "permalink": "https://foo.io/organizations/foo/issues/1234/",
+                                                    "pluginActions": Array [],
+                                                    "pluginContexts": Array [],
+                                                    "pluginIssues": Array [],
                                                     "project": Object {
                                                       "id": "2",
+                                                      "platform": "javascript",
                                                       "slug": "project-slug",
                                                     },
+                                                    "seenBy": Array [],
+                                                    "shareId": null,
+                                                    "shortId": "JAVASCRIPT-6QS",
                                                     "stats": Object {
                                                       "24h": Array [
                                                         Array [
@@ -2399,7 +2506,14 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                         ],
                                                       ],
                                                     },
+                                                    "status": "unresolved",
+                                                    "statusDetails": Object {},
+                                                    "subscriptionDetails": null,
                                                     "tags": Array [],
+                                                    "title": "RequestError: GET /issues/ 404",
+                                                    "type": "error",
+                                                    "userCount": 35097,
+                                                    "userReportCount": 0,
                                                   },
                                                   "name": "Lyn",
                                                 }
@@ -2434,12 +2548,40 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                             },
                                                             "id": "123",
                                                             "issue": Object {
+                                                              "activity": Array [],
+                                                              "annotations": Array [],
                                                               "assignedTo": null,
+                                                              "count": "327482",
+                                                              "culprit": "fetchData(app/components/group/suggestedOwners)",
+                                                              "firstRelease": null,
+                                                              "firstSeen": "2019-04-05T19:44:05.963Z",
+                                                              "hasSeen": false,
                                                               "id": "1",
+                                                              "isBookmarked": false,
+                                                              "isPublic": false,
+                                                              "isSubscribed": false,
+                                                              "lastRelease": null,
+                                                              "lastSeen": "2019-04-11T01:08:59Z",
+                                                              "level": "warning",
+                                                              "logger": null,
+                                                              "metadata": Object {
+                                                                "function": "fetchData",
+                                                                "type": "RequestError",
+                                                              },
+                                                              "numComments": 0,
+                                                              "participants": Array [],
+                                                              "permalink": "https://foo.io/organizations/foo/issues/1234/",
+                                                              "pluginActions": Array [],
+                                                              "pluginContexts": Array [],
+                                                              "pluginIssues": Array [],
                                                               "project": Object {
                                                                 "id": "2",
+                                                                "platform": "javascript",
                                                                 "slug": "project-slug",
                                                               },
+                                                              "seenBy": Array [],
+                                                              "shareId": null,
+                                                              "shortId": "JAVASCRIPT-6QS",
                                                               "stats": Object {
                                                                 "24h": Array [
                                                                   Array [
@@ -2462,7 +2604,14 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                   ],
                                                                 ],
                                                               },
+                                                              "status": "unresolved",
+                                                              "statusDetails": Object {},
+                                                              "subscriptionDetails": null,
                                                               "tags": Array [],
+                                                              "title": "RequestError: GET /issues/ 404",
+                                                              "type": "error",
+                                                              "userCount": 35097,
+                                                              "userReportCount": 0,
                                                             },
                                                             "name": "Lyn",
                                                           }
@@ -2486,12 +2635,40 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                               },
                                                               "id": "123",
                                                               "issue": Object {
+                                                                "activity": Array [],
+                                                                "annotations": Array [],
                                                                 "assignedTo": null,
+                                                                "count": "327482",
+                                                                "culprit": "fetchData(app/components/group/suggestedOwners)",
+                                                                "firstRelease": null,
+                                                                "firstSeen": "2019-04-05T19:44:05.963Z",
+                                                                "hasSeen": false,
                                                                 "id": "1",
+                                                                "isBookmarked": false,
+                                                                "isPublic": false,
+                                                                "isSubscribed": false,
+                                                                "lastRelease": null,
+                                                                "lastSeen": "2019-04-11T01:08:59Z",
+                                                                "level": "warning",
+                                                                "logger": null,
+                                                                "metadata": Object {
+                                                                  "function": "fetchData",
+                                                                  "type": "RequestError",
+                                                                },
+                                                                "numComments": 0,
+                                                                "participants": Array [],
+                                                                "permalink": "https://foo.io/organizations/foo/issues/1234/",
+                                                                "pluginActions": Array [],
+                                                                "pluginContexts": Array [],
+                                                                "pluginIssues": Array [],
                                                                 "project": Object {
                                                                   "id": "2",
+                                                                  "platform": "javascript",
                                                                   "slug": "project-slug",
                                                                 },
+                                                                "seenBy": Array [],
+                                                                "shareId": null,
+                                                                "shortId": "JAVASCRIPT-6QS",
                                                                 "stats": Object {
                                                                   "24h": Array [
                                                                     Array [
@@ -2514,7 +2691,14 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                     ],
                                                                   ],
                                                                 },
+                                                                "status": "unresolved",
+                                                                "statusDetails": Object {},
+                                                                "subscriptionDetails": null,
                                                                 "tags": Array [],
+                                                                "title": "RequestError: GET /issues/ 404",
+                                                                "type": "error",
+                                                                "userCount": 35097,
+                                                                "userReportCount": 0,
                                                               },
                                                               "name": "Lyn",
                                                             }
