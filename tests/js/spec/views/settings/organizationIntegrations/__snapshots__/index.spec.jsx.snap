@@ -1685,7 +1685,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                 >
                                                   <StyledButton
                                                     aria-disabled={false}
-                                                    aria-label="Remove"
+                                                    aria-label="Uninstall"
                                                     borderless={true}
                                                     className="css-1j0nrmm-StyledButton ejqw4f70"
                                                     disabled={false}
@@ -1694,14 +1694,14 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                   >
                                                     <Component
                                                       aria-disabled={false}
-                                                      aria-label="Remove"
+                                                      aria-label="Uninstall"
                                                       className="ejqw4f70 css-1rs3lxn-StyledButton-getColors-StyledButton eqrebog0"
                                                       onClick={[Function]}
                                                       role="button"
                                                     >
                                                       <button
                                                         aria-disabled={false}
-                                                        aria-label="Remove"
+                                                        aria-label="Uninstall"
                                                         className="ejqw4f70 css-1rs3lxn-StyledButton-getColors-StyledButton eqrebog0"
                                                         onClick={[Function]}
                                                         role="button"
@@ -1758,7 +1758,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                                   </span>
                                                                 </Component>
                                                               </Icon>
-                                                              Remove
+                                                              Uninstall
                                                             </span>
                                                           </Component>
                                                         </ButtonLabel>
@@ -3131,7 +3131,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                 >
                                                   <StyledButton
                                                     aria-disabled={false}
-                                                    aria-label="Remove"
+                                                    aria-label="Uninstall"
                                                     borderless={true}
                                                     className="css-1j0nrmm-StyledButton ejqw4f70"
                                                     disabled={false}
@@ -3140,14 +3140,14 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                   >
                                                     <Component
                                                       aria-disabled={false}
-                                                      aria-label="Remove"
+                                                      aria-label="Uninstall"
                                                       className="ejqw4f70 css-1rs3lxn-StyledButton-getColors-StyledButton eqrebog0"
                                                       onClick={[Function]}
                                                       role="button"
                                                     >
                                                       <button
                                                         aria-disabled={false}
-                                                        aria-label="Remove"
+                                                        aria-label="Uninstall"
                                                         className="ejqw4f70 css-1rs3lxn-StyledButton-getColors-StyledButton eqrebog0"
                                                         onClick={[Function]}
                                                         role="button"
@@ -3204,7 +3204,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                                   </span>
                                                                 </Component>
                                                               </Icon>
-                                                              Remove
+                                                              Uninstall
                                                             </span>
                                                           </Component>
                                                         </ButtonLabel>
